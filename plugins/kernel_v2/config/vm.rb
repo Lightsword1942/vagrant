@@ -447,11 +447,11 @@ module VagrantPlugins
           end
 
           if type == :private_network
-            if options[:type] != :dhcp
-              if !options[:ip]
-                errors << I18n.t("vagrant.config.vm.network_ip_required")
-              end
-            end
+            # if options[:type] != :dhcp
+              # if !options[:ip]
+                # errors << I18n.t("vagrant.config.vm.network_ip_required")
+              # end
+            # end
 
             if options[:ip] && options[:ip].end_with?(".1")
               errors << I18n.t("vagrant.config.vm.network_ip_ends_in_one")
